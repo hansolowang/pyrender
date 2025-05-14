@@ -1,0 +1,49 @@
+[project]
+name = "pyrender"
+version = "0.0.0"
+authors = [
+  {name = "Matthew Matl"}
+]
+dependencies = [
+    'freetype-py',                # For font loading
+    'imageio',            # For Image I/O
+    'networkx',                   # For the scene graph
+    'numpy',                      # Numpy
+    'Pillow',                     # For Trimesh texture conversions
+    'pyglet>=1.4.10',             # For the pyglet viewer
+    'PyOpenGL~=3.1.0',            # For OpenGL
+#    'PyOpenGL_accelerate~=3.1.0', # For OpenGL
+    'scipy',                      # Because of trimesh missing dep
+    'six',                        # For Python 2/3 interop
+    'trimesh',                    # For meshes
+]
+
+[project.optional-dependencies]
+dev = [
+    'flake8',            # Code formatting checker
+    'pre-commit',        # Pre-commit hooks
+    'pytest',            # Code testing
+    'pytest-cov',        # Coverage testing
+    'tox',               # Automatic virtualenv testing
+]
+docs = [
+    'sphinx',            # General doc library
+    'sphinx_rtd_theme',  # RTD theme for sphinx
+    'sphinx-automodapi'  # For generating nice tables
+]
+
+
+
+[tool.setuptools]
+packages = ["pyrender"]
+
+[tool.ruff]
+ignore = ["D103", "D405"]
+
+[tool.ruff.lint]
+select = [
+    "UP", # pyupgrade
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
