@@ -1,5 +1,5 @@
 [project]
-name = "pyrender"
+name = "pyrender2"
 version = "0.0.1"
 authors = [
   {name = "Matthew Matl"}
