@@ -31,6 +31,8 @@ docs = [
     'sphinx_rtd_theme',  # RTD theme for sphinx
     'sphinx-automodapi'  # For generating nice tables
 ]
+license = "MIT"
+license-files = ["LICEN[CS]E"]
 
 
 
